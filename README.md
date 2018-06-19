@@ -1,4 +1,4 @@
-# Let's Learn Swift fundamentals in Depth.
+# Let's Learn Swift fundamentals.
 
-# Here I have tried to explain the Swift language in depth. Please read it and let me know if any improvements need to done.
+## Here I have tried to explain the Swift language. Please read it and let me know if any improvements need to done.
 
