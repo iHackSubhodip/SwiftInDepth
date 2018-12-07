@@ -91,7 +91,7 @@ bangaloreApartment.human = Human(name: "Subh")
 bangaloreApartment.human?.humanMethod() // here ? automatically added to the end of human?. if human property is nil then bangaloreApartment.human?.humanMethod() can be nil.
 // If you put ! after human property It means you're declaring human property as a non optional type. Like the following:
 
-let humanName = bangaloreApartment.human!.nameHuman // here humanName is a String type with the non optional value. As ! is declares human property as non optional and it will exsists. If human is nil value, you can't forcefully unwrap it. This is called force inwrapping for the optional chaining.
+let humanName = bangaloreApartment.human!.nameHuman // here humanName is a String type with the non optional value. As ! is declares human property as non optional and it will exsists. If human is nil value, you can't forcefully unwrap it. This is called force unwrapping for the optional chaining.
 
 // Implicit unwrapping // Safe unwrapping.
 
