@@ -267,7 +267,7 @@ struct MyConstants{
     }
 }
 
-print(MyConstants.nameConstants.name) // Alternative way is enum, but in enum we use rawvalue so bettwr to use struct.
+print(MyConstants.nameConstants.name) // Alternative way is enum, but in enum we use rawvalue so better to use struct.
 
 
 
