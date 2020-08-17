@@ -239,17 +239,68 @@ func myReduce<U>(_ seed: U, numbers: [U], operation:(U, U) -> U)  -> U {
     return current
 }
 
+  /*
+basic higher order functions:
+ 1. sort
+ 2. sorted
+ 3. foreach
+ */
 
+var names = ["ball11", "call111", "tall1", "mall"]
+names.sort()
+print(names.sorted(by: >))
 
+let names1 = names.sorted { (v1, v2) -> Bool in
+  return v1.count > v2.count
+}
 
+let names2 = names.sorted {
+  return $0 < $1
+}
 
+names.enumerated().forEach { (tuple) in
+  print(tuple.element + "->\(tuple.offset)")
+}
 
+let lengths = names.map { (value) -> Int in
+  return value.count
+}
 
+let longerName = names.filter { (val) -> Bool in
+  return val.count > 4
+}
 
+/*
+ Compact map combines map and filter
+ same definition as map but as an optional
+ */
 
+let lens2 = names.compactMap { (val) -> Int? in
+  return val.count > 4 ? val.count : nil
+}
 
+let someVal: String? = "aa kkkk"
+let someMap = someVal.flatMap { (val) -> Int? in
+  return val.count > 4 ? val.count : nil
+}
 
+let reduceVal = names.reduce("") { (ongoing, val) -> String in
+  return ongoing + val + " "
+}
 
+/*
+ Takes the value and reduce to one (what reduce do)
+ */
+
+let longName = names.first { (val) -> Bool in
+  return val.count > 6
+}
+
+var names11 = ["b", "c", "ta", "m"]
+
+let reduceVal1 = names11.reduce(0) { $0 + $1.count }
+print(reduceVal1)
+// drop, split
 
 
 
